@@ -17,7 +17,7 @@ import id.sch.smktelkom_mlg.privateassignment.xirpl330.mymovie.R;
 import id.sch.smktelkom_mlg.privateassignment.xirpl330.mymovie.model.Results;
 
 /**
- * Created by asus on 13-May-17.
+ * Created by asus on a3-May-17.
  */
 
 public class NowPlayingAdapter extends RecyclerView.Adapter<NowPlayingAdapter.ViewHolder> {

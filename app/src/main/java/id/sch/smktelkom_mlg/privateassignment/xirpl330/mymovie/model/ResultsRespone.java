@@ -3,7 +3,7 @@ package id.sch.smktelkom_mlg.privateassignment.xirpl330.mymovie.model;
 import java.util.List;
 
 /**
- * Created by asus on 13-May-17.
+ * Created by asus on a3-May-17.
  */
 
 public class ResultsRespone {

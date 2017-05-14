@@ -16,20 +16,20 @@ public class MyIntro extends AppIntro {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addSlide(AppIntroFragment.newInstance("1",
-                "Siapapun bisa memasak seperti koki!",
-                R.drawable.chef,
+        addSlide(AppIntroFragment.newInstance("MyMovie",
+                "Cari daftar film dari berbagai kategori",
+                R.drawable.a3,
                 Color.parseColor("#ffbf00")));
 
-        addSlide(AppIntroFragment.newInstance("2",
-                "Berisi berbagai resep Masakan Jawa terpopuler",
-                R.drawable.rice,
+        addSlide(AppIntroFragment.newInstance("MyMovie",
+                "Lihat film terpopuler saat ini",
+                R.drawable.a1,
                 Color.parseColor("#e6ac00")));
 
 
-        addSlide(AppIntroFragment.newInstance("4",
-                "Mudah dan fleksibel, dapat dilihat di HP dan bisa dibawa kemana saja",
-                R.drawable.app,
+        addSlide(AppIntroFragment.newInstance("MyMovie",
+                "Lihat cukup dari hp, dimana saja, dan kapan saja",
+                R.drawable.a2,
                 Color.parseColor("#997300")));
 
         showStatusBar(false);
