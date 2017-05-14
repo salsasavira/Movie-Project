@@ -1,6 +1,9 @@
 package id.sch.smktelkom_mlg.privateassignment.xirpl330.mymovie;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
@@ -51,6 +54,22 @@ public class MainActivity extends AppCompatActivity
             Toast.makeText(getApplicationContext(), "Please obtain your API KEY first from themoviedb.org", Toast.LENGTH_LONG).show();
             return;
         }
+
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                SharedPreferences getProfs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+                boolean isFirstStart = getProfs.getBoolean("firstStart", true);
+                if (isFirstStart) {
+                    startActivity(new Intent(MainActivity.this, MyIntro.class));
+                    SharedPreferences.Editor e = getProfs.edit();
+                    e.putBoolean("firstStart", false);
+                    e.apply();
+                }
+            }
+        });
+
+        thread.start();
     }
 
     @Override
@@ -114,6 +133,11 @@ public class MainActivity extends AppCompatActivity
 
             fragment = new FavFragment();
             setTitle("Favorite");
+
+        } else if (id == R.id.popular) {
+
+            fragment = new PopulerFragment();
+            setTitle("Terpopuler");
 
         }
 

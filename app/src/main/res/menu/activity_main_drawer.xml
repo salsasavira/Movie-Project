@@ -15,6 +15,11 @@
             android:id="@+id/favorite"
             android:icon="@drawable/ic_favorite_black_24dp"
             android:title="Favorite" />
+
+        <item
+            android:id="@+id/popular"
+            android:icon="@drawable/ic_stars_black_24dp"
+            android:title="Popular" />
     </group>
 
     <item android:title="Communicate">

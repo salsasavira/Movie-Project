@@ -16,7 +16,7 @@ import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
-import id.sch.smktelkom_mlg.privateassignment.xirpl330.mymovie.adapter.ComingAdapter;
+import id.sch.smktelkom_mlg.privateassignment.xirpl330.mymovie.adapter.NowPlayingAdapter;
 import id.sch.smktelkom_mlg.privateassignment.xirpl330.mymovie.model.Results;
 import id.sch.smktelkom_mlg.privateassignment.xirpl330.mymovie.model.ResultsRespone;
 import id.sch.smktelkom_mlg.privateassignment.xirpl330.mymovie.service.GsonGetRequest;
@@ -26,11 +26,11 @@ import id.sch.smktelkom_mlg.privateassignment.xirpl330.mymovie.service.VolleySin
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ComingFragment extends Fragment {
+public class PopulerFragment extends Fragment {
 
 
     ArrayList<Results> mlist = new ArrayList<>();
-    ComingAdapter myComing;
+    NowPlayingAdapter myPopuler;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -42,12 +42,12 @@ public class ComingFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        View rootview = inflater.inflate(R.layout.fragment_coming, container, false);
+        View rootview = inflater.inflate(R.layout.fragment_now, container, false);
 
-        RecyclerView rv = (RecyclerView) rootview.findViewById(R.id.recycleComing);
+        RecyclerView rv = (RecyclerView) rootview.findViewById(R.id.recycler);
         rv.setHasFixedSize(true);
-        myComing = new ComingAdapter(this, mlist, getContext());
-        rv.setAdapter(myComing);
+        myNowPlaying = new NowPlayingAdapter(this, mlist, getContext());
+        rv.setAdapter(myNowPlaying);
 
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());
         rv.setLayoutManager(llm);
@@ -57,7 +57,7 @@ public class ComingFragment extends Fragment {
     }
 
     private void downloadDataResource() {
-        String url = "https://api.themoviedb.org/3/movie/upcoming?api_key=b56dd418a138d8facd6d2da920f65200&language=en-US&page=1\n";
+        String url = "https://api.themoviedb.org/3/movie/now_playing?api_key=b56dd418a138d8facd6d2da920f65200&language=en-US&page=1";
 
         GsonGetRequest<ResultsRespone> myRequest = new GsonGetRequest<ResultsRespone>
                 (url, ResultsRespone.class, null, new Response.Listener<ResultsRespone>() {
@@ -66,7 +66,7 @@ public class ComingFragment extends Fragment {
                     public void onResponse(ResultsRespone response) {
                         Log.d("FLOW", "onResponse: " + (new Gson().toJson(response)));
                         mlist.addAll(response.results);
-                        myComing.notifyDataSetChanged();
+                        myNowPlaying.notifyDataSetChanged();
                     }
 
                 }, new Response.ErrorListener() {
