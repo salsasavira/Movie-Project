@@ -16,7 +16,7 @@ import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
-import id.sch.smktelkom_mlg.privateassignment.xirpl330.mymovie.adapter.NowPlayingAdapter;
+import id.sch.smktelkom_mlg.privateassignment.xirpl330.mymovie.adapter.PopulerAdapter;
 import id.sch.smktelkom_mlg.privateassignment.xirpl330.mymovie.model.Results;
 import id.sch.smktelkom_mlg.privateassignment.xirpl330.mymovie.model.ResultsRespone;
 import id.sch.smktelkom_mlg.privateassignment.xirpl330.mymovie.service.GsonGetRequest;
@@ -30,7 +30,7 @@ public class PopulerFragment extends Fragment {
 
 
     ArrayList<Results> mlist = new ArrayList<>();
-    NowPlayingAdapter myPopuler;
+    PopulerAdapter myPopuler;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -46,8 +46,8 @@ public class PopulerFragment extends Fragment {
 
         RecyclerView rv = (RecyclerView) rootview.findViewById(R.id.recycler);
         rv.setHasFixedSize(true);
-        myNowPlaying = new NowPlayingAdapter(this, mlist, getContext());
-        rv.setAdapter(myNowPlaying);
+        myPopuler = new PopulerAdapter(this, mlist, getContext());
+        rv.setAdapter(myPopuler);
 
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());
         rv.setLayoutManager(llm);
@@ -57,7 +57,8 @@ public class PopulerFragment extends Fragment {
     }
 
     private void downloadDataResource() {
-        String url = "https://api.themoviedb.org/3/movie/now_playing?api_key=b56dd418a138d8facd6d2da920f65200&language=en-US&page=1";
+        String url = "\n" +
+                "https://api.themoviedb.org/3/movie/popular?api_key=b56dd418a138d8facd6d2da920f65200&language=en-US&page=1";
 
         GsonGetRequest<ResultsRespone> myRequest = new GsonGetRequest<ResultsRespone>
                 (url, ResultsRespone.class, null, new Response.Listener<ResultsRespone>() {
@@ -66,7 +67,7 @@ public class PopulerFragment extends Fragment {
                     public void onResponse(ResultsRespone response) {
                         Log.d("FLOW", "onResponse: " + (new Gson().toJson(response)));
                         mlist.addAll(response.results);
-                        myNowPlaying.notifyDataSetChanged();
+                        myPopuler.notifyDataSetChanged();
                     }
 
                 }, new Response.ErrorListener() {
