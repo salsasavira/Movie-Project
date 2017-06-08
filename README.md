@@ -4,16 +4,16 @@
 https://drive.google.com/file/d/0B1SC-tgB9enJamRoX0VJeExObXc/view?usp=sharing
 
 #Identitas Siswa:
-Nama          : Salsabilla Mega Savira <br>
-Kelas/No Urut : XI RPL 3 <br>
-NIS           : 4824/1543.070 <br>
-Angkatan      : 24 <br> 
+Nama          : Salsabilla Mega Savira <br> <br>
+Kelas/No Urut : XI RPL 3 <br> <br>
+NIS           : 4824/1543.070 <br> <br>
+Angkatan      : 24 <br> <br>
 
 # Tentang
-Alamat API    : https://www.themoviedb.org/ <br>
-Navigasi      : Navigation Drawer <br>
-Local Database : SQLite Dasar <br>
-Deskripsi     : Aplikasi berbasis android yang berisikan tentang Film. Dengan aplikasi ini, Kita dapat melihat film terpopuler, tayang sekarang, dan yang akan tayang.Disertai dengan interface yang mudah sehingga dapat memudahkan seluruh pengguna. Aplikasi ini dapat diakses secara online dan offline <br>
+Alamat API    : https://www.themoviedb.org/ <br> <br>
+Navigasi      : Navigation Drawer <br> <br>
+Local Database : SQLite Dasar <br> <br>
+Deskripsi     : Aplikasi berbasis android yang berisikan tentang Film. Dengan aplikasi ini, Kita dapat melihat film terpopuler, tayang sekarang, dan yang akan tayang.Disertai dengan interface yang mudah sehingga dapat memudahkan seluruh pengguna. Aplikasi ini dapat diakses secara online dan offline <br> <br>
 Kelebihan     : 
  * Interview yang mudah sehingga seluruh user dapat menggunakan * 
  * Dapat diaksis secara online dan offline *
