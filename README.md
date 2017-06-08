@@ -11,8 +11,8 @@ Angkatan      : 24 <br>
 
 # Tentang
 Alamat API    : https://www.themoviedb.org/ <br>
-Navigasi      : Navigation Drawer
-Local Database : SQLite Dasar
+Navigasi      : Navigation Drawer <br>
+Local Database : SQLite Dasar <br>
 Deskripsi     : Aplikasi berbasis android yang berisikan tentang Film. Dengan aplikasi ini, Kita dapat melihat film terpopuler, tayang sekarang, dan yang akan tayang.Disertai dengan interface yang mudah sehingga dapat memudahkan seluruh pengguna. Aplikasi ini dapat diakses secara online dan offline <br>
 Kelebihan     : 
  * Interview yang mudah sehingga seluruh user dapat menggunakan * 
