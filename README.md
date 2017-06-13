@@ -3,7 +3,7 @@
 # Link APK Release
 https://drive.google.com/file/d/0B1SC-tgB9enJamRoX0VJeExObXc/view?usp=sharing
 
-#Identitas Siswa:
+# Identitas Siswa:
 Nama          : Salsabilla Mega Savira <br> <br>
 Kelas/No Urut : XI RPL 3 <br> <br>
 NIS           : 4824/1543.070 <br> <br>
